@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% load static %}
+
+ <title> {% block title %} index{% endblock title %}</title>
+
+{% block css %} <link rel="stylesheet" href=" {% static "css/index.css" %}"> {% endblock css %}
+
+{% block hero %}
+  <section class="hero mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">     
+          
+   <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+
+      <div class="category-card">
+        
+        <img src=" {% static "image/Bedroom.jpg" %}" class="card-img-top " alt="...">
+         <div class="category-overlay">
+
+          <h2 class='room'>Bedroom Collections</h2>
+          <p >Elegant beds and furniture designed for comfort and relaxation.</p>
+
+
+          <a href="#" class="btn explore-btn2 hide-mobile">Explore</a>
+        </div>
+    
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="card">
+        <img src=" {% static "image/living_room.jpg" %} " class="card-img-top" alt="...">
+        <div class="category-overlay">
+
+          <h2 class='room'>Living Room Collections</h2>
+          <p >Comfortable sofas and stylish furniture for a modern living space.</p>
+
+
+          <a href="#" class="btn explore-btn2 hide-mobile">Explore</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="card">
+        <img src=" {% static "image/diningroom.jpg" %} " class="card-img-top" alt="...">
+ <div class="category-overlay">
+
+          <h2 class='room'>Dining Room Collections</h2>
+          <p >Beautiful dining tables and chairs for memorable family moments.</p>
+
+
+          <a href="#" class="btn explore-btn2 hide-mobile">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="card">
+        <img src=" {% static "image/officeroom.jpg" %} " class="card-img-top" alt="...">
+ <div class="category-overlay">
+
+          <h2 class='room'>Office Collections</h2>
+          <p >Modern desks and furniture designed for productivity and style.</p>
+
+
+          <a href="#" class="btn explore-btn2 hide-mobile">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="card">
+        <img src=" {% static "image/outdoor.jpg" %} " class="card-img-top" alt="...">
+               <div class="category-overlay">
+
+          <h2 class='room'>Outdoor Collections</h2>
+          <p >Modern outdoor furniture perfect for relaxing in open spaces.</p>
+
+
+          <a href="#" class="btn explore-btn2 hide-mobile">Explore</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+</div> 
+
+
+<div class="col-lg-3 ">
+  <div>
+<h1 class='lead-heading mt-2 mt-lg-0' >Comfort Meets Style..!! </h1>
+</div>
+
+
+<h4 class='lead-text'>Upgrade your living space with our premium furniture collection.
+Designed for comfort, style, and durability.</h4>
+
+
+
+<button class='explore-all-btn'>Explore All  Collections  </button>
+              
+
+</div>
+</div>
+
+</div> 
+</section> 
+{% endblock hero %}
