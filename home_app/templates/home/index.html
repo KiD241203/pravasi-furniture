@@ -5,13 +5,13 @@
 
 {% block css %} <link rel="stylesheet" href=" {% static "css/index.css" %}"> {% endblock css %}
 
-{% block hero %}
-  <section class="hero mt-5">
+{% block body %}
+  <section class="hero">
     <div class="container">
       <div class="row">
         <div class="col-lg-9">     
           
-   <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+   <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-aos="fade-up">
   <div class="carousel-inner">
     <div class="carousel-item active">
 
@@ -99,16 +99,12 @@
 
 <div class="col-lg-3 ">
   <div>
-<h1 class='lead-heading mt-2 mt-lg-0' >Comfort Meets Style..!! </h1>
+<h1 class='lead-heading mt-2 mt-lg-0' data-aos="fade-right" data-aos-duration="1200" >Comfort Meets Style..!! </h1>
 </div>
 
 
-<h4 class='lead-text'>Upgrade your living space with our premium furniture collection.
-Designed for comfort, style, and durability.</h4>
-
-
-
-<button class='explore-all-btn'>Explore All  Collections  </button>
+<h4 class='lead-text' data-aos="fade-right" data-aos-delay="200">Upgrade your living space with our premium furniture collection.Designed for comfort, style, and durability.</h4>
+<button class='explore-all-btn-tp'  >Explore All  Collections  </button>
               
 
 </div>
@@ -116,4 +112,243 @@ Designed for comfort, style, and durability.</h4>
 
 </div> 
 </section> 
-{% endblock hero %}
+
+{% comment %} categorie section {% endcomment %}
+
+<section class='Categories_head'>
+
+  <div class="container">
+    <div class="shop-categories">
+      <h2 class='text-center mt-5 mb-4' data-aos="fade-up">Shop by categories</h2>
+    </div>
+  </div>
+
+<section class="categories py-5">
+<div class="container">
+
+<div class="row g-4">
+
+<!-- Living Room -->
+<div class="col-md-4 col-lg-3 " data-aos="fade-up" >
+<div class="card_cat h-100 shadow-sm border-0">
+<img src="{% static "image/living_room.jpg" %} " class="card-img-top" alt="Living Room">
+<div class="card-body text-center">
+<h5 class="card-title">Living Room</h5>
+<a href="#" class="btn btn-outline-dark btn-sm ex-btn">Explore</a>
+</div>
+</div>
+</div>
+
+<!-- Bedroom -->
+<div class="col-md-4 col-lg-3"  data-aos="fade-up" data-aos-delay="100">
+<div class="card_cat h-100 shadow-sm border-0">
+<img src="{% static "image/Bedroom.jpg" %}" class="card-img-top" alt="Bedroom">
+<div class="card-body text-center">
+<h5 class="card-title">Bedroom</h5>
+<a href="#" class="btn btn-outline-dark btn-sm ex-btn">Explore</a>
+</div>
+</div>
+</div>
+
+<!-- Dining Room -->
+<div class="col-md-4 col-lg-3"  data-aos="fade-up" data-aos-delay="200">
+<div class="card_cat h-100 shadow-sm border-0">
+<img src="{% static "image/diningroom.jpg" %} " class="card-img-top" alt="Dining Room">
+<div class="card-body text-center">
+<h5 class="card-title">Dining Hall</h5>
+<a href="#" class="btn btn-outline-dark btn-sm ex-btn">Explore</a>
+</div>
+</div>
+</div>
+<!-- outdoor Room -->
+<div class="col-md-4 col-lg-3"  data-aos="fade-up" data-aos-delay="300">
+<div class="card_cat h-100 shadow-sm border-0">
+<img src="{% static "image/outdoor.jpg" %} " class="card-img-top" alt="Dining Room">
+<div class="card-body text-center">
+<h5 class="card-title">Outdoor </h5>
+<a href="#" class="btn btn-outline-dark btn-sm ex-btn">Explore</a>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-lg-3"  data-aos="fade-up" >
+<div class="card_cat h-100 shadow-sm border-0">
+<img src="{% static "image/storage.webp" %}" class="card-img-top" alt="Dining Room">
+<div class="card-body text-center">
+<h5 class="card-title">Storage </h5>
+<a href="#" class="btn btn-outline-dark btn-sm ex-btn">Explore</a>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-lg-3"  data-aos="fade-up" data-aos-delay="100">
+<div class="card_cat h-100 shadow-sm border-0">
+
+<img src="{% static "image/kidsRoom.jpg" %}" class="card-img-top" alt="Kids Room">
+<div class="card-body text-center">
+<h5 class="card-title">Kids Room </h5>
+<a href="#" class="btn btn-outline-dark btn-sm ex-btn">Explore</a>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-lg-3"  data-aos="fade-up" data-aos-delay="200">
+<div class="card_cat h-100 shadow-sm border-0">
+<img src=" {% static "image/decor.jpg" %} " class="card-img-top" alt="Decor">
+<div class="card-body text-center">
+<h5 class="card-title">Decor </h5>
+<a href="#" class="btn btn-outline-dark btn-sm ex-btn">Explore</a>
+</div>
+</div>
+</div>
+
+<!-- Office -->
+<div class="col-md-4 col-lg-3"  data-aos="fade-up" data-aos-delay="300" >
+<div class="card_cat h-100 shadow-sm border-0">
+<img src="{% static "image/officeroom.jpg" %} " class="card-img-top" alt="Office">
+<div class="card-body text-center">
+<h5 class="card-title">Office</h5>
+<a href="#" class="btn btn-outline-dark btn-sm ex-btn">Explore</a>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+</section>
+
+
+{% comment %} best seller section {% endcomment %}
+ <h2 class='best_seller mt-5 mb-4 text-center' data-aos="fade-up">Best Sellers</h2>
+
+
+<section class='bestsellers'>
+ 
+<div class="container bg py-5">
+
+<div class="row g-4">
+
+<!-- Product 1 -->
+<div class="col-md-3" data-aos="fade-up">
+<div class="card_bestseller h-100 shadow-sm border-0">
+
+<img src="{% static "image/Bedroom.jpg" %}" class="card-img-top">
+
+<div class="card-body text-center">
+<h5 class="card-title">Modern Sofa</h5>
+<p class="text-muted">$450</p>
+<button class="btn btn-outline-dark btn-sm ex-btn">View Product</button>
+
+
+</div>
+
+</div>
+</div>
+
+<!-- Product 2 -->
+<div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+<div class="card_bestseller h-100 shadow-sm border-0">
+
+<img src="static/images/bed.jpg" class="card-img-top">
+
+<div class="card-body text-center">
+<h5 class="card-title">King Size Bed</h5>
+<p class="text-muted">$620</p>
+<button class="btn btn-outline-dark btn-sm ex-btn">View Product</button>
+</div>
+
+</div>
+</div>
+
+<!-- Product 3 -->
+<div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+<div class="card_bestseller h-100 shadow-sm border-0">
+
+<img src="static/images/dining.jpg" class="card-img-top">
+
+<div class="card-body text-center">
+<h5 class="card-title">Dining Table</h5>
+<p class="text-muted">$380</p>
+<button class="btn btn-outline-dark btn-sm ex-btn">View Product</button>
+</div>
+
+</div>
+</div>
+
+<!-- Product 4 -->
+<div class="col-md-3 " data-aos="fade-up" data-aos-delay="300">
+<div class="card_bestseller h-100 shadow-sm border-0">
+
+<img src="static/images/chair.jpg" class="card-img-top">
+
+<div class="card-body text-center">
+<h5 class="card-title">Office Chair</h5>
+<p class="text-muted">$120</p>
+<button class="btn btn-outline-dark btn-sm ex-btn">View Product</button>
+</div>
+
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+{% comment %} why choose us section  {% endcomment %}
+
+
+<section class="why-choose py-5">
+
+<div class="container">
+
+<h2 class="text-center why_chhose_us_head mb-5 " data-aos="fade-up">Why Choose Us</h2>
+
+<div class="row text-center">
+
+<div class="col-md-3 " data-aos="fade-up" >
+<div class="feature-box">
+<i class="bi bi-award feature-icon"></i>
+<h5>Premium Quality</h5>
+<p>High quality furniture made with durable materials.</p>
+</div>
+</div>
+
+<div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+<div class="feature-box">
+<i class="bi bi-truck feature-icon"></i>
+<h5>Fast Delivery</h5>
+<p>Quick and reliable delivery to your home.</p>
+</div>
+</div>
+
+<div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+<div class="feature-box">
+<i class="bi bi-cash-stack feature-icon"></i>
+<h5>Affordable Price</h5>
+<p>Best furniture prices with great value.</p>
+</div>
+</div>
+
+<div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+<div class="feature-box">
+<i class="bi bi-shield-check feature-icon"></i>
+<h5>Trusted Store</h5>
+<p>Thousands of happy customers trust our store.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({
+duration:1000,
+once:false,
+offset:120
+});
+</script>
+{% endblock body %}
