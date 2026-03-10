@@ -1,11 +1,248 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>This is products page</h1>
-</body>
-</html>
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} products{% endblock title %}
+{% block css %} <link rel="stylesheet" href="{% static "css/products.css" %}"> {% endblock css %}
+
+{% block body %}
+
+<div class="heading"><h2>All Products</h2></div>
+
+<section class='all_products '>
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-4 col-lg-3 AllPro" data-aos="fade-up"  >
+
+                <div class="card_all_product h-100 shadow-sm border-0 ">
+
+                        <img src="{% static 'image/Bedroom.jpg' %}" class="card-img-top">
+
+                        <div class="card-body text-center">
+
+                        <h5 class="card-title">Modern Sofa</h5>
+
+                        <p class="text-muted">$450</p>
+
+                        <a href="{% url 'product_detailes' %}"><button class="btn btn-outline-dark btn-sm ex-btn">
+                        View Product
+                        </button></a>
+
+                 </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4 col-lg-3 AllPro" data-aos="fade-up" data-aos-delay="100" >
+
+                <div class="card_all_product h-100 shadow-sm border-0 ">
+
+                        <img src="{% static 'image/Bedroom.jpg' %}" class="card-img-top">
+
+                        <div class="card-body text-center">
+
+                        <h5 class="card-title">Modern Sofa</h5>
+
+                        <p class="text-muted">$450</p>
+
+                        <button class="btn btn-outline-dark btn-sm ex-btn">
+                        View Product
+                        </button>
+
+                 </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4 col-lg-3 AllPro"  data-aos="fade-up" data-aos-delay="200"  >
+
+                <div class="card_all_product h-100 shadow-sm border-0 ">
+
+                        <img src="{% static 'image/Bedroom.jpg' %}" class="card-img-top">
+
+                        <div class="card-body text-center">
+
+                        <h5 class="card-title">Modern Sofa</h5>
+
+                        <p class="text-muted">$450</p>
+
+                        <button class="btn btn-outline-dark btn-sm ex-btn">
+                        View Product
+                        </button>
+
+                 </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4 col-lg-3 AllPro" data-aos="fade-up" data-aos-delay="300" >
+
+                <div class="card_all_product h-100 shadow-sm border-0 ">
+
+                        <img src="{% static 'image/Bedroom.jpg' %}" class="card-img-top">
+
+                        <div class="card-body text-center">
+
+                        <h5 class="card-title">Modern Sofa</h5>
+
+                        <p class="text-muted">$450</p>
+
+                        <button class="btn btn-outline-dark btn-sm ex-btn">
+                        View Product
+                        </button>
+
+                 </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4 col-lg-3 AllPro" data-aos="fade-up"  >
+
+                <div class="card_all_product h-100 shadow-sm border-0 ">
+
+                        <img src="{% static 'image/Bedroom.jpg' %}" class="card-img-top">
+
+                        <div class="card-body text-center">
+
+                        <h5 class="card-title">Modern Sofa</h5>
+
+                        <p class="text-muted">$450</p>
+
+                        <button class="btn btn-outline-dark btn-sm ex-btn">
+                        View Product
+                        </button>
+
+                 </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4 col-lg-3 AllPro" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="card_all_product h-100 shadow-sm border-0 ">
+
+                        <img src="{% static 'image/Bedroom.jpg' %}" class="card-img-top">
+
+                        <div class="card-body text-center">
+
+                        <h5 class="card-title">Modern Sofa</h5>
+
+                        <p class="text-muted">$450</p>
+
+                        <button class="btn btn-outline-dark btn-sm ex-btn">
+                        View Product
+                        </button>
+
+                 </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4 col-lg-3 AllPro" data-aos="fade-up" data-aos-delay="200">
+
+                <div class="card_all_product h-100 shadow-sm border-0 ">
+
+                        <img src="{% static 'image/Bedroom.jpg' %}" class="card-img-top">
+
+                        <div class="card-body text-center">
+
+                        <h5 class="card-title">Modern Sofa</h5>
+
+                        <p class="text-muted">$450</p>
+
+                        <button class="btn btn-outline-dark btn-sm ex-btn">
+                        View Product
+                        </button>
+
+                 </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4 col-lg-3 AllPro" data-aos="fade-up" data-aos-delay="300" >
+
+                <div class="card_all_product h-100 shadow-sm border-0 ">
+
+                        <img src="{% static 'image/Bedroom.jpg' %}" class="card-img-top">
+
+                        <div class="card-body text-center">
+
+                        <h5 class="card-title">Modern Sofa</h5>
+
+                        <p class="text-muted">$450</p>
+
+                        <button class="btn btn-outline-dark btn-sm ex-btn">
+                        View Product
+                        </button>
+
+                 </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4 col-lg-3 AllPro" data-aos="fade-up"  >
+
+                <div class="card_all_product h-100 shadow-sm border-0 ">
+
+                        <img src="{% static 'image/Bedroom.jpg' %}" class="card-img-top">
+
+                        <div class="card-body text-center">
+
+                        <h5 class="card-title">Modern Sofa</h5>
+
+                        <p class="text-muted">$450</p>
+
+                        <button class="btn btn-outline-dark btn-sm ex-btn">
+                        View Product
+                        </button>
+
+                 </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4 col-lg-3 AllPro" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="card_all_product h-100 shadow-sm border-0 ">
+
+                        <img src="{% static 'image/Bedroom.jpg' %}" class="card-img-top">
+
+                        <div class="card-body text-center">
+
+                        <h5 class="card-title">Modern Sofa</h5>
+
+                        <p class="text-muted">$450</p>
+
+                        <button class="btn btn-outline-dark btn-sm ex-btn">
+                        View Product
+                        </button>
+
+                 </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+
+
+AOS.init({
+duration:800,
+once:false
+
+});
+</script>
+
+{% endblock body %}

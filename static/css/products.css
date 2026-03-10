@@ -1,0 +1,42 @@
+.all_products{
+    margin-top: 3rem;
+}
+body{
+    background-color: #f5f1eb;
+}
+
+/* best seller section */
+
+.card_all_product img{
+height:220px;
+object-fit:cover;
+border-radius: 5px;
+
+}
+
+/* card animation */
+
+.card_all_product{
+transition:0.3s ease;
+
+}
+.AllPro{
+    margin-bottom: 3rem;
+}
+.card_all_product:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+.heading{
+    text-align: center;
+    margin-top: 3rem;
+    font-family: 'Playfair Display', serif;
+
+}.ex-btn{
+    margin-bottom: 1rem;
+}
+.card-title{
+        font-family: 'Courier New', Courier, monospace;
+
+}
+

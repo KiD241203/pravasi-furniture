@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Product Detail{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/product_details.css' %}">
+{% endblock %}
+
+{% block body %}
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            <h1>left</h1>
+
+            <div class="img-box">
+                <img
+                    src="{% static "image/Bedroom.jpg" %}"
+                    class="product-img"
+                    alt=""
+                />
+                
+            </div>
+
+
+        </div>
+       
+       
+       
+       
+       
+       
+        <div class="col-12 col-lg-6">
+           
+
+            <div class="product-details">
+                <ul>
+                    <li><h1>Name</h1></li>
+                    
+                                    
+                        <li><p class="product-desc" id="desc">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                                    Fugit similique quasi voluptates ex vero et itaque, quis odio at. 
+                                    Magnam obcaecati vitae, ea nostrum quas unde at repellat id ullam! 
+                                    </p>
+                                    <a href="#" class="read-more" id="readMore">Read more</a> </li>
+                                  
+                    <li>Amount</li>
+                    <li class='mt-3'>in stock or not </li>
+                    
+                    <li class='mt-3'><label for="">Quantity</label> <div class="input-group" style="width:150px;">
+
+                        <button class="btn btn-dark minus">-</button>
+
+                        <input type="text" class="form-control text-center input" value="1">
+
+                        <button class="btn btn-dark plus">+</button>
+
+                        </div> </li>
+
+                    
+                    <li class='mt-3'><button class='btn btn-dark'>Add to cart</button>  <button class='btn btn-outline-dark'>Buy Now</button> </li>
+                    
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+{% endblock %}
+
+
+{% block js %}
+<script src="{% static 'js/product_details.js' %}"></script>
+{% endblock %}

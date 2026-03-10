@@ -115,7 +115,7 @@
 
 {% comment %} categorie section {% endcomment %}
 
-<section class='Categories_head'>
+<section class='Categories_head' id='categories' >
 
   <div class="container">
     <div class="shop-categories">
@@ -134,7 +134,7 @@
 <img src="{% static "image/living_room.jpg" %} " class="card-img-top" alt="Living Room">
 <div class="card-body text-center">
 <h5 class="card-title">Living Room</h5>
-<a href="#" class="btn btn-outline-dark btn-sm ex-btn">Explore</a>
+<a href="{% url 'category_products' %}" class="btn btn-outline-dark btn-sm ex-btn">Explore</a>
 </div>
 </div>
 </div>
@@ -228,7 +228,7 @@
 <div class="row g-4">
 
 <!-- Product 1 -->
-<div class="col-md-3" data-aos="fade-up">
+<div class="col-md-4 col-lg-3" data-aos="fade-up">
 <div class="card_bestseller h-100 shadow-sm border-0">
 
 <img src="{% static "image/Bedroom.jpg" %}" class="card-img-top">
@@ -245,7 +245,7 @@
 </div>
 
 <!-- Product 2 -->
-<div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+<div class="col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="100">
 <div class="card_bestseller h-100 shadow-sm border-0">
 
 <img src="static/images/bed.jpg" class="card-img-top">
@@ -260,7 +260,7 @@
 </div>
 
 <!-- Product 3 -->
-<div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+<div class="col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="200">
 <div class="card_bestseller h-100 shadow-sm border-0">
 
 <img src="static/images/dining.jpg" class="card-img-top">
@@ -275,7 +275,7 @@
 </div>
 
 <!-- Product 4 -->
-<div class="col-md-3 " data-aos="fade-up" data-aos-delay="300">
+<div class="col-md-4 col-lg-3 " data-aos="fade-up" data-aos-delay="300">
 <div class="card_bestseller h-100 shadow-sm border-0">
 
 <img src="static/images/chair.jpg" class="card-img-top">
