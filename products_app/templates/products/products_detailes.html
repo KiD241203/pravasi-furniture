@@ -9,65 +9,80 @@
 
 {% block body %}
 
-<section class="container mt-5">
-    <div class="row">
-        <div class="col-12 col-lg-6">
-            <h1>left</h1>
+<section class="product-container container mt-5">
 
-            <div class="img-box">
-                <img
-                    src="{% static "image/Bedroom.jpg" %}"
-                    class="product-img"
-                    alt=""
-                />
-                
-            </div>
+<div class="row g-4">
 
+<!-- IMAGE SIDE -->
+<div class="col-lg-6">
 
-        </div>
+<div class="image-card">
 
-        <div class="col-12 col-lg-6">
+<img src="{{ product.image.url }}" class="product-img">
+
+</div>
+
+</div>
 
 
-            <div class="product-details">
-                <ul>
-                    <li><h1>Name</h1></li>
-                    
-                                    
-                        <li><p class="product-desc" id="desc">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                                    Fugit similique quasi voluptates ex vero et itaque, quis odio at. 
-                                    Magnam obcaecati vitae, ea nostrum quas unde at repellat id ullam! 
-                                    </p>
-                                    <a href="#" class="read-more" id="readMore">Read more</a> </li>
-                    <li>Amount</li>
-                    <li class='mt-3'>in stock or not </li>
-                    
-                    <li class='mt-3'><label for="">Quantity</label> <div class="input-group" style="width:150px;">
+<!-- PRODUCT INFO -->
+<div class="col-lg-6">
 
-                        <button class="btn btn-dark minus">-</button>
+<div class="info-card">
 
-                        <input type="text" class="form-control text-center input" value="1">
+<h2 class="product-title">{{ product.name }}</h2>
 
-                        <button class="btn btn-dark plus">+</button>
+<p class="product-desc" id="desc">
+{{ product.description }}
+</p>
 
-                        </div> </li>
+<span class="read-more" id="readMore">Read more</span>
 
-                    
-                    <li class='mt-3'><button class='btn btn-dark'>Add to cart</button>  <button class='btn btn-outline-dark'>Buy Now</button> </li>
-                    
-                </ul>
-            </div>
+<div class="price-box">
 
-        </div>
-    </div>
+<span class="price">₹{{ product.price }}</span>
+
+<span class="stock">In Stock</span>
+
+</div>
+
+
+{% comment %} <!-- QUANTITY -->
+<div class="quantity-box">
+
+<label>Quantity</label>
+
+<div class="qty-controls">
+
+<button class="minus">-</button>
+
+<input type="text" value="1" class="qty-input">
+
+<button class="plus">+</button>
+
+</div>
+
+</div> {% endcomment %}
+
+
+<!-- BUTTONS -->
+<div class="action-buttons">
+
+<a href="{% url 'add_to_cart' product.id %}"><button class="btn cart-btn">Add to Cart</button></a>
+
+<a href=""><button class="btn buy-btn">Buy Now</button></a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-
-
-
 {% endblock %}
-
 
 {% block js %}
 <script src="{% static 'js/product_details.js' %}"></script>

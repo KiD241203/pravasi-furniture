@@ -3,209 +3,33 @@
 {% block title %}category {% endblock title %}
 {% block css %} <link rel="stylesheet" href="{% static "css/category_products.css" %}"> {% endblock css %}
 
-{% block body %}
- 
+{% block body %}    
 
-
-{% for cat in value %}
-   
-
-<h2 class='best_seller mt-5 mb-4 text-center' data-aos="fade-up"></h2>
+<h2 class='best_seller mt-5 mb-4 text-center' data-aos="fade-up">{{ category.name }}</h2>
 
 
 <section class='bestsellers'>
-<div class="container bg py-5">
-
-<div class="row g-4">
-
-<!-- Product 1 -->
-<div class="col-md-4 col-lg-3" data-aos="fade-up">
-<div class="card_bestseller h-100 shadow-sm border-0">
-
-<img src="" class="card-img-top">
-
-<div class="card-body text-center">
-<h5 class="card-title">Modern Sofa</h5>
-<p class="text-muted">$450</p>
-<button class="btn btn-outline-dark btn-sm ex-btn">View Product</button>
- 
-
-</div>
-
-</div>
-</div>
-{% endfor %}
-<!-- Product 2 -->
-<div class="col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-<div class="card_bestseller h-100 shadow-sm border-0">
-
-<img src="static/images/bed.jpg" class="card-img-top">
-
-<div class="card-body text-center">
-<h5 class="card-title">King Size Bed</h5>
-<p class="text-muted">$620</p>
-<button class="btn btn-outline-dark btn-sm ex-btn">View Product</button>
-</div>
-
-</div>
-</div>
-
-<!-- Product 3 -->
-<div class="col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-<div class="card_bestseller h-100 shadow-sm border-0">
-
-<img src="static/images/dining.jpg" class="card-img-top">
-
-<div class="card-body text-center">
-<h5 class="card-title">Dining Table</h5>
-<p class="text-muted">$380</p>
-<button class="btn btn-outline-dark btn-sm ex-btn">View Product</button>
-</div>
-
-</div>
-</div>
-
-<!-- Product 4 -->
-<div class="col-md-4 col-lg-3 " data-aos="fade-up" data-aos-delay="300">
-<div class="card_bestseller h-100 shadow-sm border-0">
-
-<img src="static/images/chair.jpg" class="card-img-top">
-
-<div class="card-body text-center">
-<h5 class="card-title">Office Chair</h5>
-<p class="text-muted">$120</p>
-<button class="btn btn-outline-dark btn-sm ex-btn">View Product</button>
-</div>
-
-</div>
-</div>
-
-<h2 class='best_seller mt-5 mb-4 text-center' data-aos="fade-up">Dining room</h2>
-
-
-<div class="col-md-4 col-lg-3" data-aos="fade-up">
-<div class="card_bestseller h-100 shadow-sm border-0">
-
-<img src="{% static "image/Bedroom.jpg" %}" class="card-img-top">
-
-<div class="card-body text-center">
-<h5 class="card-title">Modern Sofa</h5>
-<p class="text-muted">$450</p>
-<button class="btn btn-outline-dark btn-sm ex-btn">View Product</button> 
-
-</div>
-
-</div>
-</div>
-
-<h2 class='best_seller mt-5 mb-4 text-center' data-aos="fade-up">Bedroom</h2>
-
-<div class="col-md-4 col-lg-3" data-aos="fade-up">
-<div class="card_bestseller h-100 shadow-sm border-0">
-
-<img src="{% static "image/Bedroom.jpg" %}" class="card-img-top">
-
-<div class="card-body text-center">
-<h5 class="card-title">Modern Sofa</h5>
-<p class="text-muted">$450</p>
-<button class="btn btn-outline-dark btn-sm ex-btn">View Product</button> 
-
-</div>
-
-</div>
-</div>
-
-<h2 class='best_seller mt-5 mb-4 text-center' data-aos="fade-up">Outdoor</h2>
-
-<div class="col-md-4 col-lg-3" data-aos="fade-up">
-<div class="card_bestseller h-100 shadow-sm border-0">
-
-<img src="{% static "image/Bedroom.jpg" %}" class="card-img-top">
-
-<div class="card-body text-center">
-<h5 class="card-title">Modern Sofa</h5>
-<p class="text-muted">$450</p>
-<button class="btn btn-outline-dark btn-sm ex-btn">View Product</button> 
-
-</div>
-
-</div>
-</div>
-
-<h2 class='best_seller mt-5 mb-4 text-center' data-aos="fade-up">Storage</h2>
-
-<div class="col-md-4 col-lg-3" data-aos="fade-up">
-<div class="card_bestseller h-100 shadow-sm border-0">
-
-<img src="{% static "image/Bedroom.jpg" %}" class="card-img-top">
-
-<div class="card-body text-center">
-<h5 class="card-title">Modern Sofa</h5>
-<p class="text-muted">$450</p>
-<button class="btn btn-outline-dark btn-sm ex-btn">View Product</button> 
-
-</div>
-
-</div>
-</div>
-
-<h2 class='best_seller mt-5 mb-4 text-center' data-aos="fade-up">Kids room</h2>
-
-<div class="col-md-4 col-lg-3" data-aos="fade-up">
-<div class="card_bestseller h-100 shadow-sm border-0">
-
-<img src="{% static "image/Bedroom.jpg" %}" class="card-img-top">
-
-<div class="card-body text-center">
-<h5 class="card-title">Modern Sofa</h5>
-<p class="text-muted">$450</p>
-<button class="btn btn-outline-dark btn-sm ex-btn">View Product</button> 
-
-</div>
-
-</div>
-</div>
-
-<h2 class='best_seller mt-5 mb-4 text-center' data-aos="fade-up">decor</h2>
-
-<div class="col-md-4 col-lg-3" data-aos="fade-up">
-<div class="card_bestseller h-100 shadow-sm border-0">
-
-<img src="{% static "image/Bedroom.jpg" %}" class="card-img-top">
-
-<div class="card-body text-center">
-<h5 class="card-title">Modern Sofa</h5>
-<p class="text-muted">$450</p>
-<button class="btn btn-outline-dark btn-sm ex-btn">View Product</button> 
-
-</div>
-
-</div>
-</div>
-
-<h2 class='best_seller mt-5 mb-4 text-center' data-aos="fade-up">office</h2>
-
-<div class="col-md-4 col-lg-3" data-aos="fade-up">
-<div class="card_bestseller h-100 shadow-sm border-0">
-
-<img src="{% static "image/Bedroom.jpg" %}" class="card-img-top">
-
-<div class="card-body text-center">
-<h5 class="card-title">Modern Sofa</h5>
-<p class="text-muted">$450</p>
-<button class="btn btn-outline-dark btn-sm ex-btn">View Product</button> 
-
-</div>
-
-</div>
-</div>
-
-</div>
-
-</div>
+   <div class="container bg py-5">
+      <div class="row g-4">
+         <!-- Product 1 -->
+         
+         {% for value in products %} 
+         <div class="col-md-4 col-lg-3" data-aos="fade-up">
+            <div class="card_bestseller h-100 shadow-sm border-0">     
+               <img src="{{ value.image.url }}" class="card-img-top">    
+               <div class="card-body text-center">
+                  <h5 class="card-title">{{ value.name }}</h5>
+                  <p class="text-muted">₹{{ value.price }} </p>
+                  <a href="{% url 'product_detailes' value.id %}"> <button class="btn btn-outline-dark btn-sm ex-btn">View Product</button>  </a>               
+               </div>    
+            </div>
+         </div>
+         {% endfor %}
+      </div>
+   </div>
 </section>
 
-   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
 AOS.init({
 duration:1000,

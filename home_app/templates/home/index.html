@@ -13,60 +13,23 @@
           
           <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-aos="fade-up">
             <div class="carousel-inner">
-              <div class="carousel-item active">
+              
+              {% for item in heroCategory %}
+                
+             
+                
+              <div class="carousel-item {% if forloop.first %}active{% endif %} ">
                 <div class="category-card">
-                    <img src=" {% static "image/Bedroom.jpg" %}" class="card-img-top " alt="...">
+                    <img src="{{ item.image.url }}" class="card-img-top " alt="...">
                   <div class="category-overlay">
-                    <h2 class='room'>Bedroom Collections</h2>
-                    <p >Elegant beds and furniture designed for comfort and relaxation.</p>
-                    <a href="#" class="btn explore-btn2 hide-mobile">Explore</a>
+                    <h2 class='room'> {{ item.category.name }} Collections</h2>
+                    <p > {{ item.decription }} </p>
+                    <a href=" {% url 'category_products' item.category.id  %} " class="btn explore-btn2 hide-mobile">Explore</a>
                   </div>    
               </div>
             </div>
-
-              <div class="carousel-item">
-                <div class="card">
-                  <img src=" {% static "image/living_room.jpg" %} " class="card-img-top" alt="...">
-                  <div class="category-overlay">
-                    <h2 class='room'>Living Room Collections</h2>
-                    <p >Comfortable sofas and stylish furniture for a modern living space.</p>
-                    <a href="#" class="btn explore-btn2 hide-mobile">Explore</a>
-                  </div>               
-                </div>
-              </div>
-
-              <div class="carousel-item">
-                <div class="card">
-                  <img src=" {% static "image/diningroom.jpg" %} " class="card-img-top" alt="...">
-                  <div class="category-overlay">
-                    <h2 class='room'>Dining Room Collections</h2>
-                    <p >Beautiful dining tables and chairs for memorable family moments.</p>
-                    <a href="#" class="btn explore-btn2 hide-mobile">Explore</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="carousel-item">
-                <div class="card">
-                  <img src=" {% static "image/officeroom.jpg" %} " class="card-img-top" alt="...">
-                  <div class="category-overlay">
-                    <h2 class='room'>Office Collections</h2>
-                    <p>Modern desks and furniture designed for productivity and style.</p>
-                    <a href="#" class="btn explore-btn2 hide-mobile">Explore</a>
-                  </div>
-              </div>
-            </div>
-
-              <div class="carousel-item">
-                <div class="card">
-                  <img src=" {% static "image/outdoor.jpg" %} " class="card-img-top" alt="...">
-                  <div class="category-overlay">
-                    <h2 class='room'>Outdoor Collections</h2>
-                    <p >Modern outdoor furniture perfect for relaxing in open spaces.</p>
-                    <a href="#" class="btn explore-btn2 hide-mobile">Explore</a>
-                  </div>
-                </div>
-            </div>
+ {% endfor %}
+              
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon"></span>
@@ -80,8 +43,9 @@
         <div>
           <h1 class='lead-heading mt-2 mt-lg-0' data-aos="fade-right" data-aos-duration="1200" >Comfort Meets Style..!! </h1>
         </div>
-        <h4 class='lead-text' data-aos="fade-right" data-aos-delay="200">Upgrade your living space with our premium furniture collection.Designed for comfort, style, and durability.</h4>
-        <button class='explore-all-btn-tp'  >Explore All  Collections  </button>          
+        <h4 class='lead-text' data-aos="fade-right" data-aos-delay="200">Upgrade your living space with our premium furniture collection.Designed for comfort, style, and durability.</h4>               
+        <a href='products'> <button class='explore-all-btn-tp'  >Explore All  Collections  </button>   </a>       
+        
       </div>
     </div>
   </div> 
@@ -92,7 +56,7 @@
 <section class='Categories_head' id='categories' >
   <div class="container">
     <div class="shop-categories">
-      <h2 class='text-center mt-5 mb-4' data-aos="fade-up">Shop by categories</h2>
+      <h2 class='text-center mt-2 mb-2' data-aos="fade-up">Shop by categories</h2>
     </div>
   </div>
 
@@ -105,7 +69,12 @@
             <img src="{{ value.image.url }}" class="card-img-top">
             <div class="card-body text-center">
               <h5 class="card-title">{{ value.name }}</h5>
-              <a href="#" class="btn btn-outline-dark btn-sm ex-btn">Explore</a>
+              
+              
+              <a href="{% url 'category_products' value.id %}" class="btn btn-outline-dark btn-sm ex-btn">Explore</a>
+                
+              
+                
             </div>
           </div>
         </div>
@@ -115,12 +84,12 @@
   </section>
 </section>
 
-
 {% comment %} best seller section {% endcomment %}
-<h2 class='best_seller mt-5 mb-4 text-center' data-aos="fade-up">Best Sellers</h2>
+<h2 class='best_seller mt-2 mb-2 text-center' data-aos="fade-up">Best Sellers</h2>
 <section class='bestsellers'>
   <div class="container bg py-5">
     <div class="row g-4">
+     
       {% for value in product %}
                <!-- Product 1 --> 
       <div class="col-md-4 col-lg-3" data-aos="fade-up">
@@ -129,16 +98,19 @@
           <div class="card-body text-center">
             <h5 class="card-title">{{ value.name }}</h5>               
             <p class="text-muted">$ {{ value.price }}</p>                       
-            <button class="btn btn-outline-dark btn-sm ex-btn">View Product  </button>
-                        
+            
+  
+            
+         <a href=" {% url 'product_detailes' value.id %}"><button class="btn btn-outline-dark btn-sm ex-btn">View Product  </button></a>                    
                     
           </div>
         </div>
-       {% endfor %}
       </div>
+      {% endfor %}
+      
     </div>
   </div>
-</section>
+  </section>
 
 
 {% comment %} why choose us section  {% endcomment %}

@@ -1,0 +1,58 @@
+body{
+    background-color:#0d0d0d;
+    color:white;
+}
+
+.checkout-card{
+    background:#1a1a1a;
+    padding:30px;
+    border-radius:10px;
+    border:1px solid #2c2c2c;
+}
+
+.order-summary{
+    background:#1a1a1a;
+    padding:25px;
+    border-radius:10px;
+    border:1px solid #2c2c2c;
+}
+
+.checkout-title{
+    color:#f0c040;
+    font-weight:600;
+}
+
+.form-control{
+    background:#111;
+    border:1px solid #333;
+    color:white;
+}
+
+.form-control:focus{
+    background:#111;
+    color:white;
+    border-color:#f0c040;
+    box-shadow:none;
+}
+
+label{
+    color:#ccc;
+}
+
+.place-order-btn{
+    background:#f0c040;
+    border:none;
+    color:black;
+    font-weight:600;
+    width:100%;
+    padding:12px;
+}
+
+.place-order-btn:hover{
+    background:#e0b030;
+}
+
+.form-check-label{
+    color:#ddd;
+}
+

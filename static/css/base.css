@@ -1,0 +1,39 @@
+.footer-section{
+background:#111;
+color:#ddd;
+padding:40px 0;
+}
+
+.footer-section h5{
+color:#f0c040;
+margin-bottom:15px;
+}
+
+.footer-section a{
+color:#bbb;
+text-decoration:none;
+}
+
+.footer-section a:hover{
+color:#f0c040;
+}
+
+.footer-section hr{
+border-color:#333;
+}
+
+.footer-section p{
+margin-bottom:6px;
+}
+
+@media (max-width:768px){
+
+.footer-section{
+text-align:center;
+}
+
+.footer-section .col-md-4{
+margin-bottom:25px;
+}
+
+}

@@ -43,7 +43,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link"  href="/products">Products</a>
+          <a class="nav-link"  href="{% url 'products' %}">Products</a>
         </li>
 
         <li class="nav-item">
@@ -52,6 +52,11 @@
 
         <li class="nav-item ">
           <a class="nav-link " href="/contact">Contact</a>
+        </li>
+
+
+        <li class="nav-item ">
+          <a class="nav-link " href="{% url 'cart' %}">Cart</a>
         </li>
 
         <li class="nav-item">
@@ -75,29 +80,28 @@
 
 
 
-<footer class="bg-dark text-white pt-4 pb-3 mt-5">
+<footer class="footer-section mt-5">
 
 <div class="container">
-<div class="row">
+<div class="row text-center text-md-start">
 
-<div class="col-md-4">
+<div class="col-md-4 mb-4">
 <h5>Pravasi Furnitures</h5>
 <p>Quality furniture for your home.</p>
 </div>
 
-<div class="col-md-4">
+<div class="col-md-4 mb-4">
 <h5>Quick Links</h5>
 <ul class="list-unstyled">
-<li><a href="">Home</a></li>
-<li><a href="">Categories</a></li>
-<li><a href="">Products</a></li>
-<li><a href="">About</a></li>
-<li><a href="">Contact</a></li>
+<li><a href="#">Home</a></li>
+<li><a href="#">Categories</a></li>
+<li><a href="#">Products</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
 </ul>
 </div>
 
-  
-<div class="col-md-4">
+<div class="col-md-4 mb-4">
 <h5>Contact</h5>
 <p>📍 Malappuram</p>
 <p>📞 +91 2233445566</p>
@@ -108,7 +112,9 @@
 
 <hr>
 
-<p class="text-center">© 2026 Pravasi Furnitures</p>
+<div class="text-center pb-3">
+© 2026 Pravasi Furnitures
+</div>
 
 </div>
 
