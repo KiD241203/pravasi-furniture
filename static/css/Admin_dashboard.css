@@ -1,0 +1,21 @@
+.dashboard-card{
+background:#141414;
+border:1px solid #2a2a2a;
+border-radius:10px;
+padding:25px;
+text-align:center;
+color:white;
+margin-bottom:20px;
+transition:0.3s;
+}
+
+.dashboard-card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 20px rgba(0,0,0,0.4);
+}
+
+.dashboard-card h4{
+color:#f0c040;
+font-size:28px;
+margin-bottom:10px;
+}

@@ -1,0 +1,38 @@
+.order-card{
+background:#141414;
+border-radius:12px;
+border:1px solid #2a2a2a;
+color:white;
+transition:0.3s;
+}
+
+.order-card:hover{
+transform:translateY(-4px);
+box-shadow:0 8px 25px rgba(0,0,0,0.4);
+}
+
+.product-row{
+display:flex;
+justify-content:space-between;
+padding:8px 0;
+border-bottom:1px solid #2a2a2a;
+}
+
+.product-row:last-child{
+border-bottom:none;
+}
+
+.status-badge{
+background:#f0c040;
+color:black;
+padding:5px 12px;
+border-radius:20px;
+font-size:14px;
+font-weight:600;
+}
+
+.order-total{
+font-size:18px;
+font-weight:600;
+color:#f0c040;
+}

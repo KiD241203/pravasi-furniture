@@ -1,0 +1,35 @@
+.add-product-card{
+background:#141414;
+border:1px solid #2a2a2a;
+padding:30px;
+border-radius:10px;
+color:white;
+}
+
+.add-product-card label{
+margin-bottom:5px;
+}
+
+.form-control{
+background:#1f1f1f;
+border:1px solid #333;
+color:white;
+}
+
+.form-control:focus{
+background:#1f1f1f;
+color:white;
+border-color:#f0c040;
+box-shadow:none;
+}
+
+.btn-warning{
+background:#f0c040;
+border:none;
+color:black;
+font-weight:600;
+}
+
+.btn-warning:hover{
+background:#ddb030;
+}

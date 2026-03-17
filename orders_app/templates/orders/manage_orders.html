@@ -1,0 +1,244 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/manage_orders.css' %}">
+{% endblock css %}
+
+{% block body %}
+
+<div class="container mt-5">
+
+<h2 class="text-white mb-4">Manage Orders</h2>
+
+<!-- TABS -->
+<ul class="nav nav-tabs custom-tabs">
+
+<li class="nav-item">
+<button class="nav-link active" data-bs-toggle="tab" data-bs-target="#placed">
+Placed ({{ Placed_orders|length }})
+</button>
+</li>
+
+<li class="nav-item">
+<button class="nav-link" data-bs-toggle="tab" data-bs-target="#processing">
+Processing ({{ Processing_orders|length }})
+</button>
+</li>
+
+<li class="nav-item">
+<button class="nav-link" data-bs-toggle="tab" data-bs-target="#shipped">
+Shipped ({{ Shipped_orders|length }})
+</button>
+</li>
+
+<li class="nav-item">
+<button class="nav-link" data-bs-toggle="tab" data-bs-target="#delivered">
+Delivered ({{ Delivered_orders|length }})
+</button>
+</li>
+
+</ul>
+
+<!-- TAB CONTENT -->
+<div class="tab-content mt-4">
+
+<!-- PLACED -->
+<div class="tab-pane fade show active" id="placed">
+
+{% for order in Placed_orders %}
+
+<div class="order-row">
+
+<div class="left">
+<strong>#{{ order.id }}</strong> - {{ order.name }}<br>
+<small>{{ order.phone }} | {{ order.city }}</small>
+</div>
+
+<div class="middle">
+₹{{ order.total_price }}
+</div>
+
+<div class="right">
+
+<span class="status placed">{{ order.order_status }}</span>
+
+<a href="#" class="btn btn-sm btn-outline-light">View</a>
+
+<form method="POST" action="{% url 'update_order_status' order.id %}" class="d-flex gap-2">
+{% csrf_token %}
+
+<select name="status" class="form-select form-select-sm">
+<option value="Placed" {% if order.order_status == "Placed" %}selected{% endif %}>Placed</option>
+<option value="Processing">Processing</option>
+<option value="Shipped">Shipped</option>
+<option value="Delivered">Delivered</option>
+</select>
+
+<button class="btn btn-sm btn-warning" type="submit">
+Update
+</button>
+
+</form>
+</div>
+
+</div>
+
+{% empty %}
+<p class='p_text'>No placed orders</p>
+{% endfor %}
+
+</div>
+
+<!-- PROCESSING -->
+<div class="tab-pane fade" id="processing">
+
+{% for order in Processing_orders %}
+
+<div class="order-row">
+
+<div class="left">
+<strong>#{{ order.id }}</strong> - {{ order.name }}<br>
+<small>{{ order.phone }} | {{ order.city }}</small>
+</div>
+
+<div class="middle">
+₹{{ order.total_price }}
+</div>
+
+<div class="right">
+
+<span class="status processing">{{ order.order_status }}</span>
+
+<a href="#" class="btn btn-sm btn-outline-light">View</a>
+
+<form method="POST" action="{% url 'update_order_status' order.id %}" class="d-flex gap-2">
+{% csrf_token %}
+
+<select name="status" class="form-select form-select-sm">
+<option value="Placed">Placed</option>
+<option value="Placed" {% if order.order_status == "Processing" %}selected{% endif %}>Processing</option>
+
+<option value="Shipped">Shipped</option>
+<option value="Delivered">Delivered</option>
+</select>
+
+<button class="btn btn-sm btn-warning" type="submit">
+Update
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+{% empty %}
+<p class='p_text'>No processing orders</p>
+{% endfor %}
+
+</div>
+
+<!-- SHIPPED -->
+<div class="tab-pane fade" id="shipped">
+
+{% for order in Shipped_orders %}
+
+<div class="order-row">
+
+<div class="left">
+<strong>#{{ order.id }}</strong> - {{ order.name }}<br>
+<small>{{ order.phone }} | {{ order.city }}</small>
+</div>
+
+<div class="middle">
+₹{{ order.total_price }}
+</div>
+
+<div class="right">
+
+<span class="status shipped">{{ order.order_status }}</span>
+
+<a href="#" class="btn btn-sm btn-outline-light">View</a>
+
+<form method="POST" action="{% url 'update_order_status' order.id %}" class="d-flex gap-2">
+{% csrf_token %}
+
+<select name="status" class="form-select form-select-sm">
+<option value="Placed">Placed</option>
+<option value="Processing">Processing</option>
+<option value="Placed" {% if order.order_status == "Shipped" %}selected{% endif %}>Shipped</option>
+<option value="Delivered">Delivered</option>
+</select>
+
+<button class="btn btn-sm btn-warning" type="submit">
+Update
+</button>
+
+</form>
+</div>
+
+</div>
+
+{% empty %}
+<p class='p_text'>No shipped orders</p>
+{% endfor %}
+
+</div>
+
+<!-- DELIVERED -->
+<div class="tab-pane fade" id="delivered">
+
+{% for order in Delivered_orders %}
+
+<div class="order-row">
+
+<div class="left">
+<strong>#{{ order.id }}</strong> - {{ order.name }}<br>
+<small>{{ order.phone }} | {{ order.city }}</small>
+</div>
+
+<div class="middle">
+₹{{ order.total_price }}
+</div>
+
+<div class="right">
+
+<span class="status delivered">{{ order.order_status }}</span>
+
+<a href="#" class="btn btn-sm btn-outline-light">View</a>
+
+
+<form method="POST" action="{% url 'update_order_status' order.id %}" class="d-flex gap-2">
+{% csrf_token %}
+
+<select name="status" class="form-select form-select-sm" disabled>
+<option value="Placed">Placed</option>
+<option value="Processing">Processing</option>
+<option value="Shipped">Shipped</option>
+<option value="Placed" {% if order.order_status == "Delivered" %}selected{% endif %}>Delivered</option>
+
+</select>
+
+<button class="btn btn-sm btn-warning" type="submit" disabled   >
+Update
+</button>
+
+</form>
+
+
+</div>
+
+</div>
+
+{% empty %}
+<p class='p_text'>No delivered orders</p>
+{% endfor %}
+
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}

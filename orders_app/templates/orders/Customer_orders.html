@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} orders {% endblock title %}
+{% block css %} <link rel="stylesheet" href=" {% static "css/Customer_orders.css" %}"> {% endblock css %}
+{% block body %}
+
+<div class="container mt-5">
+
+<h2 class="mb-4">My Orders</h2>
+
+{% for order in orders %}
+
+<div class="order-card mb-4 p-4">
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+
+<div>
+<h5>Order #{{ order.id }}</h5>
+<small>{{ order.created_at }}</small>
+</div>
+
+<span class="status-badge">
+{{ order.order_status }}
+</span>
+
+</div>
+
+<div class="order-products">
+
+{% for item in order_item.all %}
+
+<div class="product-row">
+
+<div>
+<strong>{{ item.product_name }}</strong>
+<br>
+<small>Qty: {{ item.quantity }}</small>
+</div>
+
+<div>
+₹{{ item.price }}
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+<hr>
+
+<div class="d-flex justify-content-between align-items-center">
+
+<div class="order-total">
+Total: ₹{{ order.total_price }}
+</div>
+
+<a href="{% url 'order_details' order.id %}" class="btn btn-outline-warning btn-sm">
+View Details
+</a>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

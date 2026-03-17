@@ -207,5 +207,23 @@ flex-direction:column;
 }
 
 
-/* ---------------- DISABLE HOVER ON TOUCH DEVICES ---------------- */
+@media(max-width:992px){
+    .cart-btn{
+        width:100%;
+    }
+    .buy-btn{
+        width:100%;
+    }
+    .cart-btn:hover{
+        
+        background:#f4c430;
+        color:#111;
+        
 
+    }
+    .buy-btn:hover{
+        background:transparent;
+        color:#f4c430;
+        border-color: #f4c430;
+    }
+}

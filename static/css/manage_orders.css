@@ -1,0 +1,98 @@
+body{
+    background:#0d0d0d;
+    color:white;
+}
+
+/* TABS */
+.custom-tabs{
+    border-bottom:1px solid #2a2a2a;
+}
+
+.custom-tabs .nav-link{
+    color:#aaa;
+    border:none;
+}
+
+.custom-tabs .nav-link.active{
+    color:#f0c040;
+    border-bottom:2px solid #f0c040;
+    background:none;
+}
+
+/* ORDER CARD */
+.order-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#141414;
+    border:1px solid #2a2a2a;
+    border-radius:12px;
+    padding:15px 20px;
+    margin-bottom:15px;
+}
+
+/* LEFT */
+.left{
+    display:flex;
+    flex-direction:column;
+}
+
+/* MIDDLE */
+.middle{
+    font-weight:600;
+    color:#f0c040;
+}
+
+/* RIGHT */
+.right{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+/* STATUS */
+.status{
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:12px;
+}
+
+.status.placed{
+    background:#555;
+}
+
+.status.processing{
+    background:#007bff;
+}
+
+.status.shipped{
+    background:#ffc107;
+    color:black;
+}
+
+.status.delivered{
+    background:#28a745;
+}
+
+/* BUTTON */
+.btn-outline-light{
+    border-color:#aaa;
+    color:#aaa;
+}
+
+.btn-outline-light:hover{
+    background:#aaa;
+    color:black;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px){
+
+
+
+}
+
+
+.p_text{
+    color: rgba(255, 255, 255, 0.548);
+}

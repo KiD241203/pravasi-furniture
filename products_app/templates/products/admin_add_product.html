@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/admin_add_product.css' %}">
+{% endblock css %}
+
+{% block body %}
+
+<div class="container mt-5 mb-5">
+
+<h2 class="text-center mb-4">Add New Product</h2>
+
+<div class="add-product-card">
+
+<form method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+
+<div class="row">
+
+<!-- Product Name -->
+<div class="col-md-6 mb-3">
+<label>Product Name</label>
+<input type="text" name="name" class="form-control" required>
+</div>
+
+<!-- Price -->
+<div class="col-md-6 mb-3">
+<label>Price</label>
+<input type="number" name="price" class="form-control" required>
+</div>
+
+<!-- Category -->
+<div class="col-md-6 mb-3">
+<label>Category</label>
+
+<select name="category" class="form-control" required>
+
+<option value="">-- Select Category --</option>
+
+{% for category in categories %}
+<option value="{{ category.id }}">
+    {{ category.name }}
+</option>
+{% endfor %}
+
+</select>
+
+</div>
+
+<!-- Image -->
+<div class="col-md-6 mb-3">
+<label>Product Image</label>
+<input type="file" name="image" class="form-control" required>
+</div>
+
+<!-- Description -->
+<div class="col-12 mb-3">
+<label>Description</label>
+<textarea name="description" rows="4" class="form-control"></textarea>
+</div>
+
+</div>
+
+<!-- Error Message -->
+{% if error %}
+<div class="alert alert-danger">
+    {{ error }}
+</div>
+{% endif %}
+
+<!-- Submit Button -->
+<button type="submit" class="btn btn-warning w-100">
+Add Product
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+{% endblock %}
